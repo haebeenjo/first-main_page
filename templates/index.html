@@ -2,9 +2,145 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+
+    <title>A반 3조를 소개합니당!!!</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@200;300;400;500;600;700;900&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+        @font-face {
+            font-family: 'NeoDunggeunmo';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            font-family: 'Sunflower', sans-serif;
+        }
+
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            width: 70%;
+            margin: 0px auto;
+        }
+
+        .music {
+            width: 200px;
+            margin-left: auto;
+            margin-right: 50px;
+            border: 2px solid gray;
+        }
+
+        .maintitle {
+            height: 300px;
+            width: 100%;
+
+            background-image: url(../static/노을5총사.png);
+            background-size: cover;
+            background-position: center;
+
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+
+        .maintitle > h1 {
+            font-weight: bold;
+            margin: 260px 0px 0px 1200px;
+            font-family: 'NeoDunggeunmo';
+            color: #F0FFF0;
+            opacity: 0.6;
+        }
+
+        .wrap2 {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: space-between;
+            margin: 10px 0px 0px 0px;
+
+            font-size: large;
+
+            width: 100%;
+        }
+
+        .wrapleft {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            width: 20%;
+
+            border: 2px solid gray;
+            padding: 30px;
+        }
+
+        .center {
+            width: 79%;
+
+            border: 2px solid gray;
+            padding: 30px;
+        }
+
+        .members {
+            margin-top: 10px;
+            border: 2px solid gray;
+            padding: 30px;
+            width: 100%;
+
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+
+    </style>
+
+    <script>
+    </script>
+
 </head>
 <body>
-dgaegefre
+<div class="wrap">
+    <div class="music">
+        음악 플레이
+    </div>
+    <div class="maintitle">
+        <h1>A반 3조</h1>
+    </div>
+    <div class="wrap2">
+        <div class="wrapleft">
+            <div class="visitor">방문자수</div>
+            <div class="list">목록
+                <ul>
+                    <li>팀 소개</li>
+                    <li>프로젝트 소개</li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="center">
+            <div id="team">팀 소개글</div>
+            <div id="project">프로젝트 소개글</div>
+        </div>
+    </div>
+    <div class="members">멤버소개링크</div>
+</div>
+
+
 </body>
 </html>
