@@ -58,17 +58,35 @@
                     for (let i = 0; i < rows.length; i++) {
                         let name = rows[i]['name']
                         let comment = rows[i]['comment']
-
+                        let num = rows[i]['num']
                         let temp_html = `<div class="card">
                                             <div class="card-body">
                                                 <blockquote class="blockquote mb-0" style="font-size: 18px">
                                                     <p>${comment}</p>
                                                     <footer class="blockquote-footer">${name}</footer>
                                                 </blockquote>
+                                                <a href="#" onclick="comment_delete('${num}')" class="card-footer-item has-text-danger">
+                                                        삭제
+                                                        <span class="icon">
+                                              <i class="fas fa-ban"></i>
+                                              </span>
+                                                    </a>
                                             </div>
                                         </div>`
                         $('#comment-list').append(temp_html)
                     }
+                }
+            });
+        }
+
+        function comment_delete(num) {
+            $.ajax({
+                type: 'delete',
+                url: '/first_mini2/delete',
+                data: {'num_give': num},
+                success: function (response) {
+                    alert(response['msg']);
+                    window.location.reload()
                 }
             });
         }

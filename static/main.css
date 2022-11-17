@@ -78,12 +78,19 @@
 
         .members {
             margin-top: 10px;
+            margin-bottom: 10px;
             border: 2px solid gray;
             padding: 30px;
             width: 100%;
 
             border-bottom-left-radius: 50px;
             border-bottom-right-radius: 50px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
         .project {
@@ -94,17 +101,13 @@
             text-decoration: underline;
         }
 
-        .members {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
         .memberphoto {
             width: 100%;
             height: 250px;
 
             object-fit: contain
+        }
+
+        .myclock {
+            font-size: 5vmin;
         }

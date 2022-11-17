@@ -36,24 +36,35 @@ def haebeen():
 
 
 # 보라님
-@app.route("/first_mini1", methods=["POST"])
+@app.route("/first_mini1/write", methods=["POST"])
 def first_mini1_post():
     name_receive = request.form['name_give']
     comment_receive = request.form['comment_give']
 
+    count_list = list(db.bora.find({}, {'_id': False}))
+    count = len(count_list) + 1
+
     doc = {
         'name':name_receive,
-        'comment':comment_receive
+        'comment':comment_receive,
+        'num': count
     }
 
     db.bora.insert_one(doc)
 
     return jsonify({'msg':'저장 완료'})
 
-@app.route("/first_mini1", methods=["GET"])
+@app.route("/first_mini1/list", methods=["GET"])
 def first_mini1_get():
-    homework_list = list(db.bora.find({}, {'_id': False}))
-    return jsonify({'first_mini1':homework_list})
+    get_list = list(db.bora.find({}, {'_id': False}))
+    return jsonify({'first_mini1':get_list})
+
+@app.route('/first_mini1/delete', methods=["delete"])
+def first_mini1_delete():
+    num_receive = request.form["num_give"]
+
+    db.bora.delete_one({'num': int(num_receive)})
+    return jsonify({'msg': '삭제 완료!'})
 
 
 
@@ -66,9 +77,13 @@ def first_mini2_post():
     name_receive = request.form['name_give']
     comment_receive = request.form['comment_give']
 
+    count_list = list(db.bongjin.find({}, {'_id': False}))
+    count = len(count_list) + 1
+
     doc = {
         'name':name_receive,
-        'comment':comment_receive
+        'comment':comment_receive,
+        'num': count
     }
 
     db.bongjin.insert_one(doc)
@@ -79,6 +94,13 @@ def first_mini2_post():
 def first_mini2_get():
     homework_list = list(db.bongjin.find({}, {'_id': False}))
     return jsonify({'first_mini2':homework_list})
+
+@app.route('/first_mini2/delete', methods=["delete"])
+def first_mini2_delete():
+    num_receive = request.form["num_give"]
+
+    db.bongjin.delete_one({'num': int(num_receive)})
+    return jsonify({'msg': '삭제 완료!'})
 
 
 
@@ -92,9 +114,13 @@ def first_mini3_post():
     name_receive = request.form['name_give']
     comment_receive = request.form['comment_give']
 
+    count_list = list(db.haebeen.find({}, {'_id': False}))
+    count = len(count_list) + 1
+
     doc = {
-        'name':name_receive,
-        'comment':comment_receive
+        'name': name_receive,
+        'comment': comment_receive,
+        'num': count
     }
 
     db.haebeen.insert_one(doc)
@@ -106,7 +132,12 @@ def first_mini3_get():
     homework_list = list(db.haebeen.find({}, {'_id': False}))
     return jsonify({'first_mini3':homework_list})
 
+@app.route('/first_mini3/delete', methods=["delete"])
+def first_mini3_delete():
+    num_receive = request.form["num_give"]
 
+    db.haebeen.delete_one({'num': int(num_receive)})
+    return jsonify({'msg': '삭제 완료!'})
 
 
 
@@ -117,9 +148,13 @@ def first_mini4_post():
     name_receive = request.form['name_give']
     comment_receive = request.form['comment_give']
 
+    count_list = list(db.jongsu.find({}, {'_id': False}))
+    count = len(count_list) + 1
+
     doc = {
-        'name':name_receive,
-        'comment':comment_receive
+        'name': name_receive,
+        'comment': comment_receive,
+        'num': count
     }
 
     db.jongsu.insert_one(doc)
@@ -131,7 +166,12 @@ def first_mini4_get():
     homework_list = list(db.jongsu.find({}, {'_id': False}))
     return jsonify({'first_mini4':homework_list})
 
+@app.route('/first_mini4/delete', methods=["delete"])
+def first_mini4_delete():
+    num_receive = request.form["num_give"]
 
+    db.jongsu.delete_one({'num': int(num_receive)})
+    return jsonify({'msg': '삭제 완료!'})
 
 
 
@@ -142,9 +182,13 @@ def first_mini5_post():
     name_receive = request.form['name_give']
     comment_receive = request.form['comment_give']
 
+    count_list = list(db.yebin.find({}, {'_id': False}))
+    count = len(count_list) + 1
+
     doc = {
-        'name':name_receive,
-        'comment':comment_receive
+        'name': name_receive,
+        'comment': comment_receive,
+        'num': count
     }
 
     db.yebin.insert_one(doc)
@@ -155,6 +199,13 @@ def first_mini5_post():
 def first_mini5_get():
     homework_list = list(db.yebin.find({}, {'_id': False}))
     return jsonify({'first_mini5':homework_list})
+
+@app.route('/first_mini5/delete', methods=["delete"])
+def first_mini5_delete():
+    num_receive = request.form["num_give"]
+
+    db.yebin.delete_one({'num': int(num_receive)})
+    return jsonify({'msg': '삭제 완료!'})
 
 if __name__ == '__main__':
    app.run('0.0.0.0', port=5000, debug=True)
