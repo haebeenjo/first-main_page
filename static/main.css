@@ -1,0 +1,110 @@
+
+        @font-face {
+            font-family: 'NeoDunggeunmo';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            font-family: 'Sunflower', sans-serif;
+        }
+
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            width: 75%;
+            margin: 0px auto;
+        }
+
+        .music {
+            width: 200px;
+            margin: 2px 50px 0px auto;
+            height: 35px;
+        }
+
+        .maintitle {
+            height: 300px;
+            width: 100%;
+
+            background-image: url(../static/노을5총사.png);
+            background-size: cover;
+            background-position: center;
+
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+
+        .maintitle > h1 {
+            font-weight: bold;
+            margin: 260px 0px 0px 1200px;
+            font-family: 'NeoDunggeunmo';
+            color: #F0FFF0;
+            opacity: 0.6;
+        }
+
+        .wrap2 {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: space-between;
+            margin: 10px 0px 0px 0px;
+
+            font-size: large;
+
+            width: 100%;
+        }
+
+        .wrapleft {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            width: 20%;
+
+            border: 2px solid gray;
+            padding: 30px;
+        }
+
+        .center {
+            width: 79%;
+
+            border: 2px solid gray;
+            padding: 30px;
+        }
+
+        .members {
+            margin-top: 10px;
+            border: 2px solid gray;
+            padding: 30px;
+            width: 100%;
+
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        .project {
+            display: none;
+        }
+
+        li:hover {
+            text-decoration: underline;
+        }
+
+        .members {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .memberphoto {
+            width: 100%;
+            height: 250px;
+
+            object-fit: contain
+        }
