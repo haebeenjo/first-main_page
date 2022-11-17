@@ -90,7 +90,7 @@
             display: none;
         }
 
-        li:hover {
+        .list:hover {
             text-decoration: underline;
         }
 
