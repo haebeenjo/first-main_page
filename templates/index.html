@@ -35,14 +35,14 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            width: 70%;
+            width: 75%;
             margin: 0px auto;
         }
 
         .music {
             width: 200px;
-            margin-left: auto;
-            margin-right: 50px;
+            margin: 2px 50px 0px auto;
+            height: 35px;
         }
 
         .maintitle {
@@ -81,7 +81,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: space-between;
+            justify-content: flex-start;
 
             width: 20%;
 
@@ -120,8 +120,6 @@
             align-items: flex-start;
             justify-content: space-between;
             flex-wrap: wrap;
-
-
         }
 
         .memberphoto {
@@ -148,6 +146,7 @@
         function play() {
             var audio = document.getElementById("audio");
         }
+
     </script>
 
 </head>
@@ -159,8 +158,8 @@
                    value="PLAY"> <!--재생-->
             <input type="image" name="button" src="../static/icons8-pause-button-30.png" onclick="audio.pause();"
                    value="PAUSE"> <!--일시정지-->
-            <audio id="audio" src="../static/freemusicforhtml.mp3" onloadstart="audio.volume=0.5" onloadstart="audio.autoplay"
-                   loop></audio>
+            <audio id="audio" src="../static/freemusicforhtml.mp3" onloadstart="audio.volume=0.5" loop></audio>
+        </p>
 
     </div>
     <div class="maintitle">
@@ -178,8 +177,12 @@
             </div>
         </div>
         <div class="center">
-            <div class="team" id="team">팀 소개글</div>
-            <div class="project" id="project">프로젝트 소개글</div>
+            <div class="team" id="team">팀 소개글
+                <div>내용</div>
+            </div>
+            <div class="project" id="project">프로젝트 소개글
+                <div>내용</div>
+            </div>
         </div>
     </div>
     <div class="members">
