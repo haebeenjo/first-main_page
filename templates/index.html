@@ -133,13 +133,31 @@
     </style>
 
     <script>
-        function openteam() {
+        function openteam1() {
+            $('#team2').hide()
+            $('#team3').hide()
             $('#project').hide()
-            $('#team').show()
+            $('#team1').show()
+        }
+
+        function openteam2() {
+            $('#project').hide()
+            $('#team1').hide()
+            $('#team3').hide()
+            $('#team2').show()
+        }
+
+        function openteam3() {
+            $('#project').hide()
+            $('#team2').hide()
+            $('#team1').hide()
+            $('#team3').show()
         }
 
         function openproject() {
-            $('#team').hide()
+            $('#team1').hide()
+            $('#team2').hide()
+            $('#team3').hide()
             $('#project').show()
         }
 
@@ -170,15 +188,36 @@
             <div class="visitor">방문자수</div>
             <div class="mylist">목록
                 <ul>
-                    <li onclick="openteam()" style="cursor:pointer">팀 소개</li>
-                    <li onclick="openproject()" style="cursor:pointer">프로젝트 소개</li>
+                    <li onclick="openteam1()" style="cursor:pointer">팀 소개</li>
+                    <li onclick="openteam2()" style="cursor:pointer">팀 목표</li>
+                    <li onclick="openteam3()" style="cursor:pointer">팀 약속</li>
+                    <li onclick="openproject()" style="cursor:pointer">프로젝트 소개글</li>
                 </ul>
 
             </div>
         </div>
         <div class="center">
-            <div class="team" id="team">팀 소개글
-                <div>내용</div>
+            <div class="team1" id="team1">팀 소개글
+                <div>포장하지 않고 있는 그대로를 보여주는 조, 그래서 조이름도 A반3조
+                </div>
+            </div>
+            <div class="team2" id="team2">팀 목표
+                <div>
+                    <ul>
+                        <li>기본에 충실하자</li>
+                        <li>낙오자 없이 끝까지 완주하자</li>
+                        <li>다른 팀으로 가더라도 어려운 일 있으면 의지하자</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="team3" id="team3">팀 약속
+                <div>
+                    <ul>
+                        <li>지각하지 않기</li>
+                        <li>마감 시간 지키기</li>
+                        <li>서로 배려하며 말하기</li>
+                    </ul>
+                </div>
             </div>
             <div class="project" id="project">프로젝트 소개글
                 <div>내용</div>
