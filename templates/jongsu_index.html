@@ -66,7 +66,7 @@
                                                 </blockquote>
                                             </div>
                                         </div>`
-                        $('#guest_books_list').append(temp_html)
+                        $('#comment-list').append(temp_html)
                     }
                 }
             });
@@ -106,13 +106,13 @@
 <div class="wrap">
     <div class="comment">
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" placeholder="url">
-            <label for="floatingInput">이름</label>
+            <input type="text" class="form-control" id="name" placeholder="url">
+            <label for="name">이름</label>
         </div>
         <div class="form-floating">
             <textarea class="form-control" placeholder="Leave a comment here" id="comment"
                       style="height: 100px"></textarea>
-            <label for="floatingTextarea2">방명록을 남겨주세요</label>
+            <label for="comment">방명록을 남겨주세요</label>
         </div>
         <button onclick="save_comment()" button type="button" class="btn btn-light"
                 style="background-color: deepskyblue">
