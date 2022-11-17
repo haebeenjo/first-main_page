@@ -7,7 +7,7 @@ db = client.dbsparta
 
 @app.route('/')
 def home():
-   return render_template('index.html')
+   return render_template('haebeen_index.html')
 
 @app.route("/first_mini", methods=["POST"])
 def first_mini_post():
