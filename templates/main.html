@@ -52,6 +52,21 @@
             var audio = document.getElementById("audio");
         }
 
+        function getTime() {
+            const clockContainer = document.getElementById('myclock');
+            const time = new Date();
+            const hours = time.getHours();
+            const minutes = time.getMinutes();
+            const seconds = time.getSeconds();
+            clockContainer.innerText = `${hours < 10 ? `0${hours}`: hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds }`  : seconds }`
+            }
+
+        function init() {
+            setInterval(getTime, 1000);
+        }
+
+        init();
+
     </script>
 
 </head>
@@ -72,6 +87,8 @@
     </div>
     <div class="wrap2">
         <div class="wrapleft">
+            <h1 id="myclock" class="myclock"></h1>
+            <script src="clock.js"></script>
             <div class="temp">
                 <p>현재기온: <span id="temp"></span>도</p>
             </div>
