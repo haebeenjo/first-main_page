@@ -1,0 +1,99 @@
+
+        * {
+            font-family: 'Gowun Batang', serif;
+        }
+
+        body {
+            background-color: eee;
+        }
+
+        .mypic {
+            width: 100%;
+            height: 200px;
+
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(q.PNG);
+            background-size: cover;
+            background-position: center 68%;
+
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .mytitle {
+            padding-top: 50px;
+            padding-left: 40px;
+
+            margin: 0px 180px 0px 180px;
+
+            background-color: deepskyblue;
+        }
+
+        .aboutme {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+
+            padding: 40px;
+            margin: 0px 180px 0px 180px;
+
+            background-color: lightskyblue;
+            flex-wrap: wrap;
+        }
+
+        .mypic2 {
+            border: 5px double #646464;
+        }
+
+        .myinfo {
+            font-size: 18px;
+
+            border: 5px double #646464;
+
+            padding: 30px 30px 20px;
+            margin-left: 50px;
+
+            width: 550px;
+
+            background-color: whitesmoke;
+        }
+
+        .wrap {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+
+
+            margin: 0px 180px 0px 180px;
+            height: 300px;
+
+            background-color: deepskyblue;
+        }
+
+        .comment {
+            width: 350px;
+            margin: 10px 15px;
+        }
+
+        .comment > button {
+            margin-top: 15px;
+            width: 350px;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        .mycards {
+            overflow-y: scroll;
+            margin: 5px 15px;
+
+            width: 450px;
+            height: 250px;
+            padding-right: 15px;
+        }
+
+        .card {
+            margin: 5px 0px;
+        }

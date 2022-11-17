@@ -18,107 +18,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@200;300;400;500;600;700;900&display=swap"
           rel="stylesheet">
 
-    <style>
-        * {
-            font-family: 'Gowun Batang', serif;
-        }
-
-        body {
-            background-color: eee;
-        }
-
-        .mypic {
-            width: 100%;
-            height: 200px;
-
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../static/q.PNG);
-            background-size: cover;
-            background-position: center 68%;
-
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: center;
-        }
-
-        .mytitle {
-            padding-top: 50px;
-            padding-left: 40px;
-
-            margin: 0px 180px 0px 180px;
-
-            background-color: deepskyblue;
-        }
-
-        .aboutme {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: center;
-
-            padding: 40px;
-            margin: 0px 180px 0px 180px;
-
-            background-color: lightskyblue;
-            flex-wrap: wrap;
-        }
-
-        .mypic2 {
-            border: 5px double #646464;
-        }
-
-        .myinfo {
-            font-size: 18px;
-
-            border: 5px double #646464;
-
-            padding: 30px 30px 20px;
-            margin-left: 50px;
-
-            width: 550px;
-
-            background-color: whitesmoke;
-        }
-
-        .wrap {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: center;
-
-
-            margin: 0px 180px 0px 180px;
-            height: 300px;
-
-            background-color: deepskyblue;
-        }
-
-        .comment {
-            width: 350px;
-            margin: 10px 15px;
-        }
-
-        .comment > button {
-            margin-top: 15px;
-            width: 350px;
-            margin-right: 15px;
-            font-weight: bold;
-        }
-
-        .mycards {
-            overflow-y: scroll;
-            margin: 5px 15px;
-
-            width: 450px;
-            height: 250px;
-            padding-right: 15px;
-        }
-
-        .card {
-            margin: 5px 0px;
-        }
-
-    </style>
     <script>
         $(document).ready(function () {
             show_comment()
@@ -137,23 +36,23 @@
 
             $.ajax({
                 type: 'POST',
-                url: '/test',
+                url: '/mini3',
                 data: {name_give: name, comment_give: comment},
                 success: function (response) {
                     alert(response['msg'])
-
                     window.location.reload()
+
                 }
-            })
+            });
         }
 
         function show_comment() {
             $.ajax({
                 type: "GET",
-                url: "/test",
+                url: "/mini3",
                 data: {},
                 success: function (response) {
-                    let rows = response['guest_book_list']
+                    let rows = response['guest_books']
                     for (let i = 0; i < rows.length; i++) {
                         let name = rows[i]['name']
                         let comment = rows[i]['comment']
@@ -166,11 +65,12 @@
                                                 </blockquote>
                                             </div>
                                         </div>`
-                        $('#guest_book_list').append(temp_html)
+                        $('#guest_books_list').append(temp_html)
                     }
                 }
             });
         }
+
     </script>
 
 </head>
@@ -184,7 +84,7 @@
     <h1>Introduction</h1>
 </div>
 <div class="aboutme">
-    <img src=https://i.ibb.co/5Y3Hz57/c.png
+    <img src=../static/jongsu.jpg
          class="mypic2" width="250" alt="이미지"/>
     <div class="myinfo">
         <h4><strong>&nbsp;&nbsp;&nbsp;I am...</strong></h4>
