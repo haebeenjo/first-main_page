@@ -92,8 +92,8 @@ def first_mini2_post():
 
 @app.route("/first_mini2/showcomment", methods=["GET"])
 def first_mini2_get():
-    homework_list = list(db.bongjin.find({}, {'_id': False}))
-    return jsonify({'first_mini2':homework_list})
+    get_list = list(db.bongjin.find({}, {'_id': False}))
+    return jsonify({'first_mini2':get_list})
 
 @app.route('/first_mini2/deletecomment', methods=["POST"])
 def first_mini2_delete():
@@ -129,8 +129,8 @@ def first_mini3_post():
 
 @app.route("/first_mini3/showcomment", methods=["GET"])
 def first_mini3_get():
-    homework_list = list(db.haebeen.find({}, {'_id': False}))
-    return jsonify({'first_mini3':homework_list})
+    get_list = list(db.haebeen.find({}, {'_id': False}))
+    return jsonify({'first_mini3':get_list})
 
 @app.route('/first_mini3/deletecomment', methods=["POST"])
 def first_mini3_delete():
@@ -163,8 +163,8 @@ def first_mini4_post():
 
 @app.route("/first_mini4/showcomment", methods=["GET"])
 def first_mini4_get():
-    homework_list = list(db.jongsu.find({}, {'_id': False}))
-    return jsonify({'first_mini4':homework_list})
+    get_list = list(db.jongsu.find({}, {'_id': False}))
+    return jsonify({'first_mini4':get_list})
 
 @app.route('/first_mini4/deletecomment', methods=["POST"])
 def first_mini4_delete():
@@ -197,8 +197,8 @@ def first_mini5_post():
 
 @app.route("/first_mini5/showcomment", methods=["GET"])
 def first_mini5_get():
-    homework_list = list(db.yebin.find({}, {'_id': False}))
-    return jsonify({'first_mini5':homework_list})
+    get_list = list(db.yebin.find({}, {'_id': False}))
+    return jsonify({'first_mini5':get_list})
 
 @app.route('/first_mini5/deletecomment', methods=["post"])
 def first_mini5_delete():
