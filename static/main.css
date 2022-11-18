@@ -90,7 +90,7 @@
             flex-direction: row;
             align-items: flex-start;
             justify-content: space-between;
-
+            flex-wrap: wrap;
         }
 
         .project {
@@ -103,16 +103,11 @@
 
         .memberphoto {
             width: 100%;
-            height: auto;
-            flex-wrap: wrap;
+            height: 250px;
+
+            object-fit: contain
         }
 
         .myclock {
             font-size: 5vmin;
-        }
-
-        .sketchbook {
-            width: 100%;
-            height: auto;
-            flex-wrap: inherit;
         }
