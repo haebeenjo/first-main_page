@@ -38,7 +38,7 @@
 
             $.ajax({
                 type: 'POST',
-                url: '/first_mini2',
+                url: '/first_mini2/writecomment',
                 data: { 'name_give': name, 'comment_give': comment },
                 success: function (response) {
                     alert(response['msg'])
@@ -51,7 +51,7 @@
         function show_comment() {
             $.ajax({
                 type: "GET",
-                url: "/first_mini2",
+                url: "/first_mini2/showcomment",
                 data: {},
                 success: function (response) {
                     let rows = response['first_mini2']
@@ -82,8 +82,8 @@
 
         function comment_delete(num) {
             $.ajax({
-                type: 'delete',
-                url: '/first_mini2/delete',
+                type: 'post',
+                url: '/first_mini2/deletecomment',
                 data: {'num_give': num},
                 success: function (response) {
                     alert(response['msg']);

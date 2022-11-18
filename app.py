@@ -36,7 +36,7 @@ def haebeen():
 
 
 # 보라님
-@app.route("/first_mini1/write", methods=["POST"])
+@app.route("/first_mini1/writecomment", methods=["POST"])
 def first_mini1_post():
     name_receive = request.form['name_give']
     comment_receive = request.form['comment_give']
@@ -54,12 +54,12 @@ def first_mini1_post():
 
     return jsonify({'msg':'저장 완료'})
 
-@app.route("/first_mini1/list", methods=["GET"])
+@app.route("/first_mini1/showcomment", methods=["GET"])
 def first_mini1_get():
     get_list = list(db.bora.find({}, {'_id': False}))
     return jsonify({'first_mini1':get_list})
 
-@app.route('/first_mini1/delete', methods=["delete"])
+@app.route('/first_mini1/deletecomment', methods=["POST"])
 def first_mini1_delete():
     num_receive = request.form["num_give"]
 
@@ -72,7 +72,7 @@ def first_mini1_delete():
 
 
 # 봉진님
-@app.route("/first_mini2", methods=["POST"])
+@app.route("/first_mini2/writecomment", methods=["POST"])
 def first_mini2_post():
     name_receive = request.form['name_give']
     comment_receive = request.form['comment_give']
@@ -90,12 +90,12 @@ def first_mini2_post():
 
     return jsonify({'msg':'저장 완료'})
 
-@app.route("/first_mini2", methods=["GET"])
+@app.route("/first_mini2/showcomment", methods=["GET"])
 def first_mini2_get():
     homework_list = list(db.bongjin.find({}, {'_id': False}))
     return jsonify({'first_mini2':homework_list})
 
-@app.route('/first_mini2/delete', methods=["delete"])
+@app.route('/first_mini2/deletecomment', methods=["POST"])
 def first_mini2_delete():
     num_receive = request.form["num_give"]
 
@@ -109,7 +109,7 @@ def first_mini2_delete():
 
 
 # 해빈님
-@app.route("/first_mini3", methods=["POST"])
+@app.route("/first_mini3/writecomment", methods=["POST"])
 def first_mini3_post():
     name_receive = request.form['name_give']
     comment_receive = request.form['comment_give']
@@ -127,12 +127,12 @@ def first_mini3_post():
 
     return jsonify({'msg':'저장 완료'})
 
-@app.route("/first_mini3", methods=["GET"])
+@app.route("/first_mini3/showcomment", methods=["GET"])
 def first_mini3_get():
     homework_list = list(db.haebeen.find({}, {'_id': False}))
     return jsonify({'first_mini3':homework_list})
 
-@app.route('/first_mini3/delete', methods=["delete"])
+@app.route('/first_mini3/deletecomment', methods=["POST"])
 def first_mini3_delete():
     num_receive = request.form["num_give"]
 
@@ -143,7 +143,7 @@ def first_mini3_delete():
 
 
 # 종수님
-@app.route("/first_mini4", methods=["POST"])
+@app.route("/first_mini4/writecomment", methods=["POST"])
 def first_mini4_post():
     name_receive = request.form['name_give']
     comment_receive = request.form['comment_give']
@@ -161,12 +161,12 @@ def first_mini4_post():
 
     return jsonify({'msg':'저장 완료'})
 
-@app.route("/first_mini4", methods=["GET"])
+@app.route("/first_mini4/showcomment", methods=["GET"])
 def first_mini4_get():
     homework_list = list(db.jongsu.find({}, {'_id': False}))
     return jsonify({'first_mini4':homework_list})
 
-@app.route('/first_mini4/delete', methods=["delete"])
+@app.route('/first_mini4/deletecomment', methods=["POST"])
 def first_mini4_delete():
     num_receive = request.form["num_give"]
 
@@ -177,7 +177,7 @@ def first_mini4_delete():
 
 
 # 예빈님
-@app.route("/first_mini5", methods=["POST"])
+@app.route("/first_mini5/writecomment", methods=["POST"])
 def first_mini5_post():
     name_receive = request.form['name_give']
     comment_receive = request.form['comment_give']
@@ -195,12 +195,12 @@ def first_mini5_post():
 
     return jsonify({'msg':'저장 완료'})
 
-@app.route("/first_mini5", methods=["GET"])
+@app.route("/first_mini5/showcomment", methods=["GET"])
 def first_mini5_get():
     homework_list = list(db.yebin.find({}, {'_id': False}))
     return jsonify({'first_mini5':homework_list})
 
-@app.route('/first_mini5/delete', methods=["delete"])
+@app.route('/first_mini5/deletecomment', methods=["delete"])
 def first_mini5_delete():
     num_receive = request.form["num_give"]
 
