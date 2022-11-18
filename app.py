@@ -200,7 +200,7 @@ def first_mini5_get():
     homework_list = list(db.yebin.find({}, {'_id': False}))
     return jsonify({'first_mini5':homework_list})
 
-@app.route('/first_mini5/deletecomment', methods=["delete"])
+@app.route('/first_mini5/deletecomment', methods=["post"])
 def first_mini5_delete():
     num_receive = request.form["num_give"]
 

@@ -81,7 +81,7 @@
 
         function comment_delete(num) {
             $.ajax({
-                type: 'delete',
+                type: 'post',
                 url: '/first_mini4/deletecomment',
                 data: {'num_give': num},
                 success: function (response) {
