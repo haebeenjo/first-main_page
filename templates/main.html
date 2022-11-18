@@ -20,33 +20,38 @@
     <link href="../static/main.css" rel="stylesheet">
 
     <script>
-        function openteam1() {
+        $(document).ready(function () {
             $('#team2').hide()
             $('#team3').hide()
             $('#project').hide()
-            $('#team1').show()
-        }
-
-        function openteam2() {
-            $('#project').hide()
             $('#team1').hide()
-            $('#team3').hide()
-            $('#team2').show()
-        }
 
-        function openteam3() {
-            $('#project').hide()
-            $('#team2').hide()
-            $('#team1').hide()
-            $('#team3').show()
-        }
+            $("#ot1").click(function () {
+                $('#team2').hide()
+                $('#team3').hide()
+                $('#project').hide()
+                $('#team1').show()
+            })
+            $("#ot2").click(function () {
+                $('#team2').show()
+                $('#team3').hide()
+                $('#project').hide()
+                $('#team1').hide()
+            })
+            $("#ot3").click(function () {
+                $('#team2').hide()
+                $('#team3').show()
+                $('#project').hide()
+                $('#team1').hide()
+            })
+            $("#ot4").click(function () {
+                $('#team2').hide()
+                $('#team3').hide()
+                $('#project').show()
+                $('#team1').hide()
+            })
 
-        function openproject() {
-            $('#team1').hide()
-            $('#team2').hide()
-            $('#team3').hide()
-            $('#project').show()
-        }
+        })
 
         function play() {
             var audio = document.getElementById("audio");
@@ -58,8 +63,8 @@
             const hours = time.getHours();
             const minutes = time.getMinutes();
             const seconds = time.getSeconds();
-            clockContainer.innerText = `${hours < 10 ? `0${hours}`: hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds }`  : seconds }`
-            }
+            clockContainer.innerText = `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`
+        }
 
         function init() {
             setInterval(getTime);
@@ -94,10 +99,10 @@
             </div>
             <div class="mylist">목록
                 <ul>
-                    <li class="list" onclick="openteam1()" style="cursor:pointer">팀 소개</li>
-                    <li class="list" onclick="openteam2()" style="cursor:pointer">팀 목표</li>
-                    <li class="list" onclick="openteam3()" style="cursor:pointer">팀 약속</li>
-                    <li class="list" onclick="openproject()" style="cursor:pointer">프로젝트 소개글</li>
+                    <li class="list" id="ot1" onclick="openteam1()" style="cursor:pointer">팀 소개</li>
+                    <li class="list" id="ot2" onclick="openteam2()" style="cursor:pointer">팀 목표</li>
+                    <li class="list" id="ot3" onclick="openteam3()" style="cursor:pointer">팀 약속</li>
+                    <li class="list" id="ot4" onclick="openproject()" style="cursor:pointer">프로젝트 소개글</li>
                 </ul>
 
             </div>
@@ -129,8 +134,8 @@
                 <div>
                     <br>역할:<br><br>
 
-                    박예빈: 이미지배열 및 링크 제작, 이미지 편집, 목록에 호버(밑줄)기능 추가<br>
-                    박종수: 코드 검수, ui 조정, 시계 기능 딜레이 해결<br>
+                    박예빈: 이미지배열 및 링크 제작, 이미지 편집, 목록에 호버(밑줄)기능 추가,<br>
+                    박종수: 코드 검수, ui 조정, 시계 기능 딜레이 해결, 방명록 공백입력 방지<br>
                     이드보라: 시계 기능 추가, 메인페이지/개인페이지 레이아웃 제작, css 작성, db 주요기능 구현<br>
                     조해빈: git 총괄, 개인페이지 레이아웃 검수, css 분리, 템플릿 구현, html 파일 간 이동 구현<br>
                     조봉진: 영상제작, SA작성, 음악재생기능 추가<br><br>
