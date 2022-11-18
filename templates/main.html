@@ -12,7 +12,7 @@
             integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
             crossorigin="anonymous"></script>
 
-    <title>A조 3 소개합니당!!!</title>
+    <title>A조 3반을 소개합니당!!!</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@200;300;400;500;600;700;900&display=swap"
           rel="stylesheet">
@@ -27,24 +27,28 @@
             $('#team1').hide()
 
             $("#ot1").click(function () {
+                $('#sketchbook').hide()
                 $('#team2').hide()
                 $('#team3').hide()
                 $('#project').hide()
                 $('#team1').show()
             })
             $("#ot2").click(function () {
+                $('#sketchbook').hide()
                 $('#team2').show()
                 $('#team3').hide()
                 $('#project').hide()
                 $('#team1').hide()
             })
             $("#ot3").click(function () {
+                $('#sketchbook').hide()
                 $('#team2').hide()
                 $('#team3').show()
                 $('#project').hide()
                 $('#team1').hide()
             })
             $("#ot4").click(function () {
+                $('#sketchbook').hide()
                 $('#team2').hide()
                 $('#team3').hide()
                 $('#project').show()
@@ -108,7 +112,7 @@
             </div>
         </div>
         <div class="center">
-            <img src=../static/스케치북.png">
+            <div id="sketchbook"><img src="../static/스케치북.png"></div>
             <div class="team1" id="team1">팀 소개글
                 <div>저희는 A반 3조이지만 팀명은 A조 3반입니다.<br><br>
                     순서가 조금 바뀌었다고 해서 큰일이 나진 않습니다.<br><br>
@@ -116,7 +120,7 @@
                     남들이 뭐라고 하든 생각을 뒤집어서 우리만의 것을 만들어 냅시다!<br><br>
                 </div>
             </div>
-            <div class="team2" id="team2">팀 목표
+            <div id="team2">팀 목표
                 <div>
                     <ul>
                         <li>기본에 충실하자</li>
@@ -125,7 +129,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="team3" id="team3">팀 약속
+            <div id="team3">팀 약속
                 <div>
                     <ul>
                         <li>지각하지 않기</li>
@@ -134,7 +138,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="project" id="project">프로젝트 소개글
+            <div id="project">프로젝트 소개글
                 <div>
                     <br>역할:<br><br>
 
